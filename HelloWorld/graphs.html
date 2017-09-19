@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+            <meta name="viewport" content="width=device-width; initial-scale=1.0">
+                <script src="/Users/phillip/Downloads/Chart.js"></script>
+                <canvas id="secondChart" width="400" height="400"></canvas>
+                <script>
+                    var secondChart = document.getElementById("secondChart");
+                    var myChart = new Chart(secondChart, {
+                        type: 'line',
+                        data: {
+                        labels: ["SAT #35", "SAT #36", "SAT #37"],
+                        datasets: [{
+                           label: 'Reading/Writing Scores',
+                           data: [530, 690, 800],
+                           backgroundColor: [
+                                 'rgba(255, 99, 132, 0)'
+                           ],
+                           borderColor: [
+                                 'rgba(255,99,132,1)',
+                                 'rgba(54, 162, 235, 1)',
+                                 'rgba(255, 206, 86, 1)'
+                           ],
+                           borderWidth: 1
+                        }]
+                        },
+                        options: {
+                        scales: {
+                        yAxes: [{
+                            ticks: {
+                                suggestedMin: 200
+                            }
+                        }]
+                        }
+                        }
+                    });
+                </script>
+                
+                <canvas id="myChart" width="400" height="400"></canvas>
+                <script>
+                    var ctx = document.getElementById("myChart");
+                    var myChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                        labels: ["Main Idea", "Inference", "Vocabulary"],
+                        datasets: [{
+                           label: 'Frequently Missed Question Types (# Errors)',
+                           data: [12, 19, 13],
+                           backgroundColor: [
+                                 'rgba(255, 99, 132, 0.2)',
+                                 'rgba(54, 162, 235, 0.2)',
+                                 'rgba(255, 206, 86, 0.2)'
+                           ],
+                           borderColor: [
+                                 'rgba(255,99,132,1)',
+                                 'rgba(54, 162, 235, 1)',
+                                 'rgba(255, 206, 86, 1)'
+                           ],
+                           borderWidth: 1
+                        }]
+                        },
+                        options: {
+                        scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero:true
+                            }
+                        }]
+                        }
+                        }
+                    });
+                </script>
+    </head>
+    <body>
+    </body>
+</html>
